@@ -5,7 +5,7 @@ import "fmt"
 // Go 语言中推介使用驼峰命名
 // 声明变量
 //var names string
-//var ages	int
+//var ages	整型
 //var notOk bool
 
 // 批量全局声明
