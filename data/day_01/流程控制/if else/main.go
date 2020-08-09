@@ -24,17 +24,7 @@ func demo1() {
 		fmt.Println("好好上学")
 	}
 }
-func demo2() {
-	for {
-		fmt.Print("1")
-	}
-}
-func demo3() {
-	s := "hello 沙河"
-	for i, v := range s {
-		fmt.Printf("%d %c\n", i, v)
-	}
-}
+
 func main() {
 	//demo()
 	demo3()
