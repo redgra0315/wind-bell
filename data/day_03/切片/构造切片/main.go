@@ -33,6 +33,23 @@ func demo2() {
 		fmt.Println(s3[i])
 	}
 }
+
+func demo3() {
+	a1 := []int{1, 2, 23, 4}
+	a2 := a1
+	a3 := make([]int, 3, 4)
+	copy(a3, a1)
+	fmt.Println(a1, a2, a3)
+	a1[1] = 321
+	fmt.Println(a1, a2, a3)
+
+	// 删除切片中的元素
+	fmt.Println(a1)
+	a1 = append(a1[:1], a1[2:]...)
+	fmt.Println(a1, cap(a1))
+}
+
 func main() {
-	demo2()
+	//demo2()
+	demo3()
 }
