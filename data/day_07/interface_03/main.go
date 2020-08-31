@@ -1,47 +1,54 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-// 使用值接受者和指针接收者实现接口的区别
+// 接口的实现
+
 type animal interface {
 	move()
 	eat(string)
 }
-
 type cat struct {
 	name string
 	feet int8
 }
 
-// 方法使用值接受者
-//func (c cat) move() {
-//	fmt.Println("走猫步！")
-//}
-//func (c cat) eat(food string) {
-//	fmt.Printf("猫吃:\n", food)
-//}
-
-// 使用指针接收者现实这个接口
-
-func (c *cat) move() {
-	fmt.Println("走猫步!")
+type chicken struct {
+	feet int8
 }
-func (c *cat) eat(food string) {
-	fmt.Printf("猫吃:%s\n", food)
+
+func (c chicken) move() {
+	fmt.Println("激动")
 }
+
+func (c chicken) eat(food string) {
+	fmt.Printf("%s: 有%d条腿\n", food, c.feet)
+}
+
+func (c cat) move() {
+	fmt.Println("走猫步")
+}
+func (c cat) eat(food string) {
+	fmt.Printf("%s: 吃猫粮\n", food)
+}
+
 func main() {
-	var a1 animal
-	c1 := cat{
-		name: "tom",
+	var a1 animal // 定义一个接口类型的变量
+	bc := cat{    // 定义一个cat 类型的变量bc
+		name: "蓝猫",
 		feet: 4,
 	}
-	c2 := &cat{
-		"假老练",
-		4,
+	bd := chicken{
+		feet: 2,
 	}
-	//a1 = c1 // 使用值类型
-	a1 = &c1 // 实现animal这个接口的是cat的指针类型，
-	fmt.Println(a1)
-	a1 = c2
-	fmt.Println(a1)
+	a1 = bc
+	a1.move()
+	a1.eat("蓝猫")
+	a2 := bd
+	a2.eat("战斗机")
+	a2.move()
+	//fmt.Println(a2)
+
 }
