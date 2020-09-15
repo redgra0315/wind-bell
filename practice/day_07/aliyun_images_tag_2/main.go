@@ -27,7 +27,7 @@ type Data struct {
 
 // 阿里云认证
 func ailynAuth() (res string) {
-	client, err := sdk.NewClientWithAccessKey("cn-hangzhou", "LTAI4GKuRVd8TtNift14gvek", "1fvsP63srlqMcZWuJhcLB72IMHgXNw")
+	client, err := sdk.NewClientWithAccessKey("cn-hangzhou", "", "")
 	if err != nil {
 		panic(err)
 	}

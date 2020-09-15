@@ -56,7 +56,7 @@ func jsonString() string {
 //}
 
 func aliyuAuth(a string) (res string) {
-	client, err := ecs.NewClientWithAccessKey("cn-hangzhou", "LTAI4G1AU7TDVNHzZ4fmvp2P", "SIP8RWsJOUJB5VrdeIMEtoptTSqkjV")
+	client, err := ecs.NewClientWithAccessKey("cn-hangzhou", "", "")
 
 	request := ecs.CreateDescribeInstancesRequest()
 	request.Scheme = "https"

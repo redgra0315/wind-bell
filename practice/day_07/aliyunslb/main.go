@@ -21,7 +21,7 @@ type BackendServers struct {
 
 // aliyun slb auth
 func ailsunAuth() (slnInfo string, err error) {
-	client, err := slb.NewClientWithAccessKey("cn-hangzhou", "LTAI4G1AU7TDVNHzZ4fmvp2P", "SIP8RWsJOUJB5VrdeIMEtoptTSqkjV")
+	client, err := slb.NewClientWithAccessKey("cn-hangzhou", "", "")
 
 	request := slb.CreateSetVServerGroupAttributeRequest()
 	request.Scheme = "https"
