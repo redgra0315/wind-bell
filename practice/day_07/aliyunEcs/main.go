@@ -49,8 +49,8 @@ func aliyuAuth(a string) (res string) {
 	//	WithGoRoutinePoolSize(5).
 	//	WithMaxTaskQueueSize(1000)
 	//credential := &credentials.BaseCredential{
-	//	AccessKeyId: "LTAI4G7CSDhyEiXiVSk6zpnk",
-	//	AccessKeySecret: "pzvtq0LFSfF2EadlCxnZt4tLT4P4Em",
+	//	AccessKeyId: "",
+	//	AccessKeySecret: "",
 	//}
 
 	//client, err := sdk.NewClientWithOptions("cn-hangzhou",Config,credential)
