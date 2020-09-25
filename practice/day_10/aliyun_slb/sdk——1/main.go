@@ -17,7 +17,7 @@ func main() {
 		AccessKeySecret: "",
 	}
 	client, err := sdk.NewClientWithOptions("cn-hangzhou", config, credential)
-	//client, err := sdk.NewClientWithAccessKey("cn-hangzhou", "LTAI4G7CSDhyEiXiVSk6zpnk", "pzvtq0LFSfF2EadlCxnZt4tLT4P4Em")
+	//client, err := sdk.NewClientWithAccessKey("cn-hangzhou", "", "")
 	if err != nil {
 		panic(err)
 	}
