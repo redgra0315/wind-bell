@@ -12,10 +12,7 @@ func main() {
 		WithEnableAsync(true).
 		WithGoRoutinePoolSize(5).
 		WithMaxTaskQueueSize(1000)
-	credential := &credentials.BaseCredential{
-		AccessKeyId:     "",
-		AccessKeySecret: "",
-	}
+	credential := &credentials.BaseCredential{}
 	client, err := sdk.NewClientWithOptions("cn-hangzhou", config, credential)
 	//client, err := sdk.NewClientWithAccessKey("cn-hangzhou", "", "")
 	if err != nil {
