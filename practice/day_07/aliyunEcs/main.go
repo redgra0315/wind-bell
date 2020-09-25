@@ -1,8 +1,14 @@
 package main
 
+/*
+ECS 获取IP地址
+1  根据slb的id来查找到IP地址
+*/
+
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/aliyun/alibaba-cloud-sdk-go/sdk"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/ecs"
 )
 
@@ -37,25 +43,19 @@ func jsonString() string {
 	return a
 }
 
-//func ailynAuth()   {
-//	client, err := ecs.NewClientWithAccessKey("cn-hangzhou", "LTAI4G1AU7TDVNHzZ4fmvp2P", "SIP8RWsJOUJB5VrdeIMEtoptTSqkjV")
-//
-//	request := ecs.CreateDescribeInstancesRequest()
-//	request.Scheme = "https"
-//
-//	request.InstanceIds = "[\"i-bp1gqo4j4rk88zkr7bk0\"]"
-//
-//	response, err := client.DescribeInstances(request)
-//	if err != nil {
-//		fmt.Print(err.Error())
-//	}
-//	res1 := response.BaseResponse.GetHttpContentBytes()
-//
-//	str := string(res1)
-//	fmt.Println(str)
-//}
-
 func aliyuAuth(a string) (res string) {
+	//Config := sdk.NewConfig().
+	//	WithEnableAsync(true).
+	//	WithGoRoutinePoolSize(5).
+	//	WithMaxTaskQueueSize(1000)
+	//credential := &credentials.BaseCredential{
+	//	AccessKeyId: "LTAI4G7CSDhyEiXiVSk6zpnk",
+	//	AccessKeySecret: "pzvtq0LFSfF2EadlCxnZt4tLT4P4Em",
+	//}
+
+	//client, err := sdk.NewClientWithOptions("cn-hangzhou",Config,credential)
+	cca, _ := sdk.NewClientWithBearerToken()
+
 	client, err := ecs.NewClientWithAccessKey("cn-hangzhou", "", "")
 
 	request := ecs.CreateDescribeInstancesRequest()
