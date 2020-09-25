@@ -33,5 +33,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
 	fmt.Print(response.GetHttpContentString())
 }

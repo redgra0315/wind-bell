@@ -44,14 +44,6 @@ func jsonString() string {
 }
 
 func aliyuAuth(a string) (res string) {
-	//Config := sdk.NewConfig().
-	//	WithEnableAsync(true).
-	//	WithGoRoutinePoolSize(5).
-	//	WithMaxTaskQueueSize(1000)
-	//credential := &credentials.BaseCredential{
-	//	AccessKeyId: "",
-	//	AccessKeySecret: "",
-	//}
 
 	//client, err := sdk.NewClientWithOptions("cn-hangzhou",Config,credential)
 	cca, _ := sdk.NewClientWithBearerToken()
