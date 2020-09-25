@@ -14,7 +14,6 @@ func main() {
 		WithMaxTaskQueueSize(1000)
 	credential := &credentials.BaseCredential{}
 	client, err := sdk.NewClientWithOptions("cn-hangzhou", config, credential)
-	//client, err := sdk.NewClientWithAccessKey("cn-hangzhou", "", "")
 	if err != nil {
 		panic(err)
 	}
