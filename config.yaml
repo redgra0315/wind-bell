@@ -1,7 +1,0 @@
-person:
-  name: zhangsan
-  age: 18
-  hobby: rap
-  region:
-    province: hangzhou
-    city: xiaoshaqu
